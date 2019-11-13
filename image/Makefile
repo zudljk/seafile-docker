@@ -1,15 +1,15 @@
 server_version=7.0.9
 
-base_image=seafileltd/base-mc:18.04
-base_image_squashed=seafileltd/base-mc:18.04-squashed
-pro_base_image=seafileltd/pro-base-mc:18.04
-pro_base_image_squashed=seafileltd/pro-base-mc:18.04-squashed
-server_image=seafileltd/seafile-mc:$(server_version)
-server_image_squashed=seafileltd/seafile-mc:$(server_version)-squashed
-pro_server_image=seafileltd/seafile-pro-mc:$(server_version)
-pro_server_image_squashed=seafileltd/seafile-pro-mc:$(server_version)-squashed
-latest_pro_server_image=seafileltd/seafile-pro-mc:latest
-latest_server_image=seafileltd/seafile-mc:latest
+base_image=zudljk/seafile-base-mc:18.04
+base_image_squashed=zudljk/seafile-base-mc:18.04-squashed
+pro_base_image=zudljk/seafile-pro-base-mc:18.04
+pro_base_image_squashed=zudljk/seafile-pro-base-mc:18.04-squashed
+server_image=zudljk/seafile-mc:$(server_version)
+server_image_squashed=zudljk/seafile-mc:$(server_version)-squashed
+pro_server_image=zudljk/seafile-pro-mc:$(server_version)
+pro_server_image_squashed=zudljk/seafile-pro-mc:$(server_version)-squashed
+latest_pro_server_image=zudljk/seafile-pro-mc:latest
+latest_server_image=zudljk/seafile-mc:latest
 
 all:
 	@echo
