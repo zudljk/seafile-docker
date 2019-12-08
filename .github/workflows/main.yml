@@ -1,0 +1,19 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: uraimo/run-on-arch-action@v1.0.5
+    - id: build
+      with:
+        architecture: armv7
+        distribution: ubuntu18.04
+        run: |
+            uname -a
+            echo ::set-output name=uname::$(uname -a)
+            docker --version
