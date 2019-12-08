@@ -22,4 +22,6 @@ jobs:
           apt install -y docker-ce
           curl -OsSL https://github.com/jwilder/docker-squash/releases/download/v0.2.0/docker-squash-linux-amd64-v0.2.0.tar.gz
           tar -C /usr/local/bin -xzvf docker-squash-linux-amd64-v0.2.0.tar.gz
-          pwd
+          git clone https://github.com/zudljk/seafile-docker
+          cd seafile-docker/image
+          make base push-base server push-server
