@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
 
-    runs-on: [ubuntu-18.04, ARM32]
+    runs-on: [ARM32]
 
     steps:
     - uses: actions/checkout@v1
