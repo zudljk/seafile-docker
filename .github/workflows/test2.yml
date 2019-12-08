@@ -1,11 +1,11 @@
-name: CI
+name: ArchTest
 
 on: [push]
 
 jobs:
   build:
 
-    runs-on: [ARM32, ubuntu-latest]
+    runs-on: [ubuntu-18.04, ARM32]
 
     steps:
     - uses: actions/checkout@v1
