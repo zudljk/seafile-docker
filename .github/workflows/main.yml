@@ -13,11 +13,13 @@ jobs:
         architecture: armv7
         distribution: ubuntu18.04
         run: |
+          set +x
           apt update
           apt install -y apt-transport-https ca-certificates curl software-properties-common
           curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
           add-apt-repository "deb [arch=armhf] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
           apt update
           apt install -y docker-ce
-          curl https://github.com/jwilder/docker-squash/releases/download/v0.2.0/docker-squash-linux-amd64-v0.2.0.tar.gz
-          sudo tar -C /usr/local/bin -xzvf docker-squash-linux-amd64-v0.2.0.tar.gz
+          curl -OsSL https://github.com/jwilder/docker-squash/releases/download/v0.2.0/docker-squash-linux-amd64-v0.2.0.tar.gz
+          tar -C /usr/local/bin -xzvf docker-squash-linux-amd64-v0.2.0.tar.gz
+          pwd
