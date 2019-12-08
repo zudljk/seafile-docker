@@ -3,11 +3,11 @@ name: CI
 on: [push]
 
 jobs:
-  testactions_job:
+  seafile_job:
     runs-on: ubuntu-18.04
-    name: A job to test the multi architecture actions
+    name: A job to build and push the docker images for Seafile on ARMv7
     steps:
-    - name: Build with Swift on armv7
+    - name: Build seafile-docker on armv7
       uses: uraimo/run-on-arch-action@master
       with:
         architecture: armv7
@@ -19,4 +19,5 @@ jobs:
           add-apt-repository "deb [arch=armhf] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
           apt update
           apt install -y docker-ce
-          ls
+          curl https://github.com/jwilder/docker-squash/releases/download/v0.2.0/docker-squash-linux-amd64-v0.2.0.tar.gz
+          sudo tar -C /usr/local/bin -xzvf docker-squash-linux-amd64-v0.2.0.tar.gz
