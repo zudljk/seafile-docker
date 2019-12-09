@@ -15,13 +15,12 @@ jobs:
         run: |
           set +x
           apt update
-          apt install -y apt-transport-https ca-certificates curl software-properties-common build-essential
+          apt install -y apt-transport-https ca-certificates curl software-properties-common build-essential python-pip
           curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
           add-apt-repository "deb [arch=armhf] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
           apt update
           apt install -y docker-ce
-          curl -OsSL https://github.com/jwilder/docker-squash/releases/download/v0.2.0/docker-squash-linux-amd64-v0.2.0.tar.gz
-          tar -C /usr/local/bin -xzvf docker-squash-linux-amd64-v0.2.0.tar.gz
+          pip install docker-squash
           git clone https://github.com/zudljk/seafile-docker
           cd seafile-docker/image
           make base push-base server push-server

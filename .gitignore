@@ -8,3 +8,4 @@ bootstrap/*
 shared/*
 image/seafile/scripts
 image/pro-seafile/scripts
+seafile-docker.code-workspace
