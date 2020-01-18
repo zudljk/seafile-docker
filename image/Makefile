@@ -1,6 +1,6 @@
 server_version=7.0.9
 
-base_image=zudljk/seafile-base-mc:18.04
+base_image=zudljk/seafile-base-mc:latest
 base_image_squashed=zudljk/seafile-base-mc:18.04-squashed
 pro_base_image=zudljk/seafile-pro-base-mc:18.04
 pro_base_image_squashed=zudljk/seafile-pro-base-mc:18.04-squashed
