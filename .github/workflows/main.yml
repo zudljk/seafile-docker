@@ -23,4 +23,5 @@ jobs:
           pip install docker-squash
           git clone https://github.com/zudljk/seafile-docker
           cd seafile-docker/image
+          cat /proc/cpuinfo
           make base push-base server push-server
