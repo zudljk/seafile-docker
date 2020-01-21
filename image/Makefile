@@ -1,4 +1,4 @@
-server_version=7.0.9
+server_version=7.0.11
 
 base_image=zudljk/seafile-base-mc:latest
 base_image_squashed=zudljk/seafile-base-mc:18.04-squashed
