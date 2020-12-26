@@ -16,8 +16,6 @@ jobs:
           set -e
           ls -l
           export DEBIAN_FRONTEND=noninteractive
-          echo "en_US.UTF-8 UTF-8" >/etc/locale.gen
-          locale-gen
           echo "Apt::Install-Recommends 'false';" >/etc/apt/apt.conf.d/02no-recommends
           echo "Acquire::Languages { 'none' };" >/etc/apt/apt.conf.d/05no-languages
           apt-get update
