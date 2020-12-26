@@ -19,7 +19,6 @@ jobs:
           echo "Apt::Install-Recommends 'false';" >/etc/apt/apt.conf.d/02no-recommends
           echo "Acquire::Languages { 'none' };" >/etc/apt/apt.conf.d/05no-languages
           apt-get update
-          apt-get -y remove --purge puppet juju
           apt-get -y autoremove --purge
           wget -qO- https://get.docker.com/ | sh
           git clone https://github.com/zudljk/seafile-docker
